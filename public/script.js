@@ -5,9 +5,10 @@ new Vue({
     total: 0,
     items: [],
     cart: [],
-    search: '',
+    search: 'programming',
     lastSearch: '',
-    loading: false
+    loading: false,
+    price: price
   },
   methods: {
     onSubmit: function() {
@@ -62,5 +63,8 @@ new Vue({
     currency: function(price) {
       return '$'.concat(price.toFixed(2));
     }
+  },
+  mounted: function() {
+    this.onSubmit();
   }
 });
